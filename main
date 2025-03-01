@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodging Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        #gameArea {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        .player {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .enemy {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameArea">
+        <div class="player" id="player"></div>
+    </div>
+    <script>
+        document.addEventListener('keydown', (event) => {
+            const player = document.getElementById('player');
+            let left = player.offsetLeft;
+            if (event.key === 'ArrowLeft' && left > 0) {
+                player.style.left = left - 20 + 'px';
+            }
+            if (event.key === 'ArrowRight' && left < window.innerWidth - 50) {
+                player.style.left = left + 20 + 'px';
+            }
+        });
+
+        function spawnEnemy() {
+            const enemy = document.createElement('div');
+            enemy.classList.add('enemy');
+            enemy.style.left = Math.random() * (window.innerWidth - 30) + 'px';
+            document.getElementById('gameArea').appendChild(enemy);
+            
+            let pos = 0;
+            const interval = setInterval(() => {
+                pos += 5;
+                enemy.style.top = pos + 'px';
+                if (pos > window.innerHeight) {
+                    enemy.remove();
+                    clearInterval(interval);
+                }
+            }, 50);
+        }
+
+        setInterval(spawnEnemy, 1000);
+    </script>
+</body>
+</html>
