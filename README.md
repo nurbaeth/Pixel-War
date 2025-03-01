@@ -9,7 +9,7 @@ A simple browser-based dodging game where players control a red square and avoid
 
 ## Features
 - Simple and responsive controls.
-- Randomized enemy spawn locations.
+- Randomized enemy spawn locations. 
 - Increasing difficulty over time.
 
 ## Installation
