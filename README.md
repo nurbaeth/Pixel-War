@@ -8,7 +8,7 @@ A simple browser-based dodging game where players control a red square and avoid
 - Survive as long as possible and challenge yourself!
 
 ## Features
-- Simple and responsive controls.
+- Simple and responsive controls. 
 - Randomized enemy spawn locations. 
 - Increasing difficulty over time. 
 
