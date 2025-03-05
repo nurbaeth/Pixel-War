@@ -11,7 +11,7 @@ A simple browser-based dodging game where players control a red square and avoid
 - Simple and responsive controls. 
 - Randomized enemy spawn locations. 
 - Increasing difficulty over time. 
-
+ 
 ## Installation 
 No installation required! Just open the `index.html` file in your browser and start playing.
 
