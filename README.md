@@ -15,7 +15,7 @@ A simple browser-based dodging game where players control a red square and avoid
 ## Installation  
 No installation required! Just open the `index.html` file in your browser and start playing.
 
-## Future Improvements 
+## Future Improvements  
 - Add a score counter.  
 - Increase enemy speed over time. 
 - Sound effects for better experience.
